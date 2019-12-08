@@ -1,6 +1,8 @@
 package ru.job4j.chess;
+
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
+
 import java.util.Arrays;
 
 public class Logic {
@@ -22,7 +24,7 @@ public class Logic {
                     this.figures[index] = this.figures[index].copy(dest);
                 }
             }
-        }catch(IllegalStateException ilse) {
+        } catch (IllegalStateException ilse) {
             System.out.println("Слон может ходить только по диагонали");
         }
         return rst;

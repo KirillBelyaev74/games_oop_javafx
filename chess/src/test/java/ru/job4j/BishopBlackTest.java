@@ -1,9 +1,12 @@
 package ru.job4j;
+
 import org.junit.Test;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.black.BishopBlack;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
+
 public class BishopBlackTest {
     @Test
     public void whenTheCellsAreTheSame() {
@@ -12,6 +15,7 @@ public class BishopBlackTest {
         Cell result = bishopBlack.position();
         assertThat(cell, is(result));
     }
+
     @Test
     public void whenObjectsAreTheSame() {
         Cell cell = Cell.B1;
@@ -19,6 +23,7 @@ public class BishopBlackTest {
         BishopBlack result = (BishopBlack) bishopBlack.copy(cell);
         assertThat(bishopBlack.position(), is(result.position()));
     }
+
     @Test
     public void whenYouGiveС1ThenComesG5() {
         Cell c1 = Cell.C1;
